@@ -5,6 +5,7 @@ def sign_token(user):
     payload = {
         "id": user["id"],
         "email": user["email"],
+        "role": user.get("role", "user"),
         "exp": time.time() + int(os.getenv("JWT_EXPIRES"))
     }
     return jwt.encode(payload, os.getenv("JWT_SECRET"), algorithm="HS256")
