@@ -18,6 +18,7 @@ pip install fastapi uvicorn python-jose bcrypt mysql-connector-python python-dot
 uvicorn app.main:app --reload
 
 
+## Create databases and table
 
 CREATE DATABASE python_rsa_auth;
 USE python_rsa_auth;
